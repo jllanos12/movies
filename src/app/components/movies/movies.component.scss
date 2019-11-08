@@ -1,0 +1,33 @@
+.movie-img {
+    width        : 100%;
+    height       : 300px;
+    border       : 4px solid black;
+    border-radius: 5px;
+    box-shadow   : 5px 5px 5px gray;
+    cursor       : pointer;
+    transition   : width .4s, height .4s, transform 1s;
+}
+
+.movie-img:hover {
+    width    : 110%;
+    height   : 320px;
+}
+
+.title {
+    font-size  : 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 2px rgb(224, 224, 224);
+}
+
+.content-img {
+    height         : 400px;
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.content-sub-img {
+    width     : 60%;
+    text-align: center;
+}

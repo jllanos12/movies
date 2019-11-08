@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row mt-4 mb-3 justify-content-center">
+        <!-- <div class="form-group"> -->
+            <input type="text" class="form-control" name="searchMovies" placeholder="Buscar.."[(ngModel)]="searchMovies">
+        <!-- </div> -->
+        <div *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: p } |searchBar: searchMovies" class="col-md-4">
+            <div class="content-img">
+                <div class="content-sub-img">
+                    <h4 class="title mb-3 mt-3"> {{movie.nombre}} </h4>
+                    <img title="{{movie.nombre}}" [src]="movie.image" class="movie-img" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>
